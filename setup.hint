@@ -1,0 +1,7 @@
+category: X11
+requires: libgcc1 libglib2.0_0 libibus1.0_0 libintl8 libsqlite3_0 libstdc++6 libuuid1 lua python python-ibus python-gtk2.0 python-xdg
+sdesc: "IBus Chinese Input Method engine"
+ldesc: "IBus is an Intelligent Input Bus. It is a new input framework 
+for Linux OS. It provides full featured and user friendly input method 
+user interface. It also may help developers to develop input method 
+easily."
