@@ -1,0 +1,13 @@
+--- origsrc/ibus-pinyin-1.4.0/src/PYExtEditor.cc	2011-09-16 21:43:37.000000000 -0500
++++ src/ibus-pinyin-1.4.0/src/PYExtEditor.cc	2012-11-09 01:08:47.982912700 -0600
+@@ -32,6 +32,10 @@ extern "C" {
+ #include "PYDynamicSpecialPhrase.h"
+ 
+ #include "PYEditor.h"
++#ifdef __CYGWIN__
++#define gint64 long
++#define atoll atol
++#endif
+ #include "PYExtEditor.h"
+ 
+ namespace PY {
