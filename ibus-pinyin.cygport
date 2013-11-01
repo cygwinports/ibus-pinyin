@@ -10,9 +10,7 @@ for X11 systems. It provides full featured and user friendly input method
 user interface. It also may help developers to develop input method easily."
 REQUIRES="ibus girepository-Gtk3.0 girepository-IBus1.0"
 HOMEPAGE="http://code.google.com/p/ibus/"
-SRC_URI="http://ibus.googlecode.com/files/${P}.tar.gz"
+SRC_URI="http://ibus.googlecode.com/files/${NAME}-${VERSION}.tar.gz"
 PATCH_URI="1.4.0-no-long-double.patch"
 
 DISTCLEANFILES="setup/version.py src/pinyin.xml.in"
-
-CYGCONF_ARGS="--libexecdir=/usr/lib/ibus"
