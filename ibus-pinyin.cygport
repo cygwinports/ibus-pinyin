@@ -2,7 +2,7 @@ inherit python
 
 NAME="ibus-pinyin"
 VERSION=1.5.0
-RELEASE=2
+RELEASE=3
 CATEGORY="X11"
 SUMMARY="IBus Chinese X Input Module engine"
 DESCRIPTION="IBus is an Intelligent Input Bus. It is a new input framework
@@ -11,6 +11,11 @@ user interface. It also may help developers to develop input method easily."
 REQUIRES="ibus girepository-Gtk3.0 girepository-IBus1.0"
 HOMEPAGE="http://code.google.com/p/ibus/"
 SRC_URI="http://ibus.googlecode.com/files/${NAME}-${VERSION}.tar.gz"
-PATCH_URI="1.4.0-no-long-double.patch"
+PATCH_URI="
+	http://pkgs.fedoraproject.org/cgit/ibus-pinyin.git/plain/ibus-pinyin-support-set-content-type-method.patch
+	1.4.0-no-long-double.patch
+"
+
+CPPFLAGS+=" -DLUA_COMPAT_ALL -Dlua_open=luaL_newstate"
 
 DISTCLEANFILES="setup/version.py src/pinyin.xml.in"
